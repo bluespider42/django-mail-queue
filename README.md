@@ -58,6 +58,8 @@ python3 setup.py install
 Quickstart
 ============
 
+### Basic configuration
+
 First install the package into your project (see above).
 
 Open settings.py and add mailqueue to your INSTALLED_APPS:
@@ -89,6 +91,8 @@ MAILQUEUE_ATTACHMENT_DIR = 'mailqueue-attachments'
 
 ```
 
+### Running the migrations
+
 Once you've added mailqueue to your `INSTALLED_APPS` plus the basic config in settings.py, run the 
 migrations to create the tables needed:
 
@@ -96,6 +100,48 @@ migrations to create the tables needed:
 ```bash
 python manage.py migrate
 ```
+
+### Basic usage of the queue programmatically
+
+Simply save an email to the database using `MailerMessage`, and the queue will pick it up on it's next run.
+
+```python
+
+from mailqueue.models import MailerMessage
+
+my_email = "dave@example.com"
+my_name = "Dave Johnston"
+content = """
+Dear John,
+
+This is an example email from Dave.
+
+Thanks,
+Dave Johnston!
+"""
+
+msg = MailerMessage()
+msg.subject = "Hello World"
+msg.to_address = "john@example.com"
+
+# For sender names to be displayed correctly on mail clients, simply put your name first
+# and the actual email in angle brackets 
+# The below example results in "Dave Johnston <dave@example.com>"
+msg.from_address = '{} <{}>'.format(my_name, my_email)
+
+# As this is only an example, we place the text content in both the plaintext version (content) 
+# and HTML version (html_content).
+msg.content = content
+msg.html_content = content
+msg.save()
+
+
+``` 
+
+
+
+
+### Triggering the queue runner
 
 
 To send emails in the queue (without Celery), use the management command:
