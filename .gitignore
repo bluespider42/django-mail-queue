@@ -1,6 +1,6 @@
 *.pyc
 dist/
-django_mail_queue.egg-info/
+*.egg-info/
 .idea/
 .vscode/
 *.iml

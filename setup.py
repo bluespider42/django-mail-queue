@@ -8,6 +8,7 @@ setup(name='privex-mail-queue',
       version=version,
       description="Simple Mail Queuing for Django",
       long_description=open("README.md", "r").read(),
+      long_description_content_type="text/markdown",
       classifiers=[
           "Development Status :: 5 - Production/Stable",
           "Environment :: Web Environment",
