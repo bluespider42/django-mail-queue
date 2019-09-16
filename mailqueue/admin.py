@@ -1,6 +1,5 @@
 from django.contrib import admin, messages
 from django.contrib.messages import add_message
-from django.db.models import QuerySet
 from django.utils.translation import ugettext_lazy as _
 
 from .models import MailerMessage, Attachment
@@ -18,7 +17,7 @@ class MailerAdmin(admin.ModelAdmin):
     inlines = [AttachmentInline]
     date_hierarchy = "created"
 
-    def resend_emails(self, request, queryset: QuerySet):
+    def resend_emails(self, request, queryset):
         for m in queryset:  # type: MailerMessage
             m.sent = False
             m.save()
@@ -26,7 +25,16 @@ class MailerAdmin(admin.ModelAdmin):
             add_message(request, messages.SUCCESS,
                         "Resent Message ID {} (Subj: {})".format(m.id, m.subject))
 
-    resend_emails.short_description = "(Re-)send emails"
+    resend_emails.short_description = _("(Re-)send emails immediately")
+
+    def mark_unsent(self, request, queryset):
+        for m in queryset:  # type: MailerMessage
+            m.sent = False
+            m.save()
+            add_message(request, messages.SUCCESS,
+                        "Marked message ID {} (Subj: {}) as NOT sent".format(m.id, m.subject))
+
+    mark_unsent.short_description = _("Mark emails as un-sent (re-send them via queue)")
 
     def send_failed(self, request, queryset):
         emails = queryset.filter(sent=False)
