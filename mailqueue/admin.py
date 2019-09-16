@@ -13,7 +13,7 @@ class AttachmentInline(admin.TabularInline):
 class MailerAdmin(admin.ModelAdmin):
     list_display = ('created', 'subject', 'to_address', 'app', 'sent', 'last_attempt', 'reply_to')
     search_fields = ['to_address', 'subject', 'app', 'cc_address', 'bcc_address', 'reply_to']
-    actions = ['send_failed', 'resend_emails']
+    actions = ['send_failed', 'resend_emails', 'mark_unsent']
     inlines = [AttachmentInline]
     date_hierarchy = "created"
 
