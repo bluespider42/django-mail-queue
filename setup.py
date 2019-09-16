@@ -4,7 +4,7 @@ import mailqueue
 
 version = mailqueue.VERSION
 
-setup(name='django-mail-queue',
+setup(name='privex-mail-queue',
       version=version,
       description="Simple Mail Queuing for Django",
       long_description=open("README.md", "r").read(),
@@ -25,8 +25,9 @@ setup(name='django-mail-queue',
           "License :: OSI Approved :: MIT License",
           ],
       keywords='django-mail-queue',
-      author='Derek Stegelman',
-      url='http://github.com/dstegelman/django-mail-queue',
+      author='Privex Inc. (2019+) / Derek Stegelman (2011-2018)',
+      url='http://github.com/Privex/django-mail-queue',
+      author_email='chris@privex.io',
       license='MIT',
       packages=find_packages(),
       include_package_data=True,

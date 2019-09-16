@@ -3,7 +3,17 @@
 Django Mail Queue
 =================
 
-> Looking For Authors!  This project is currently looking for a user to take it over.  If that sounds like you, send a note to derek at stegelman dot com or open up an issue in this repository.
+This is a fork of http://github.com/dstegelman/django-mail-queue maintained by [Privex Inc.](https://www.privex.io/)
+
+Privex publishes the fork under the PyPi package `privex-mail-queue` (since v3.2.0) to avoid conflicts
+with the original version.
+
+This fork is considered to be actively maintained by Privex for both bug fixes and feature additions since
+December 2018. 
+
+If our fork has helped you, consider 
+[grabbing a VPS or Dedicated Server from Privex](https://www.privex.io/) - prices start at as little 
+as US$0.99/mo (yes that's 99 cents a month, and we take cryptocurrency!)
 
 Mail Queue provides an easy and simple way to send email.  Each email is saved and queued up either in
 real time or with Celery.  As always, feedback, bugs, and suggestions are welcome.
