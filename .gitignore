@@ -10,3 +10,5 @@ Vagrantfile
 .cache
 docs/build
 *.db
+mailqueue-attachments/
+venv/

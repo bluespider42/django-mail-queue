@@ -17,6 +17,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='attachment',
             name='file_attachment',
-            field=models.FileField(blank=True, null=True, storage=django.core.files.storage.FileSystemStorage(location=''), upload_to=mailqueue.utils.upload_to),
+            field=models.FileField(blank=True, null=True,
+                                   storage=django.core.files.storage.FileSystemStorage(location=''),
+                                   upload_to=mailqueue.utils.upload_to),
         ),
     ]
