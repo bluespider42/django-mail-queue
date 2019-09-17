@@ -7,8 +7,9 @@ Django Mail Queue
 
 This is a fork of http://github.com/dstegelman/django-mail-queue maintained by [Privex Inc.](https://www.privex.io/)
 
-Privex publishes the fork under the PyPi package `privex-mail-queue` (since v3.2.0) to avoid conflicts
-with the original version.
+Derek passed on ownership of the original `django-mail-queue` PyPi package to Privex on 17 Sep 2019
+
+Privex publishes the fork under the original PyPi package `django-mail-queue` (since v3.2.0).
 
 This fork is considered to be actively maintained by Privex for both bug fixes and feature additions since
 December 2018. 
@@ -28,7 +29,7 @@ Install
 ### Download and install from PyPi using pip (recommended)
 
 ```sh
-pip3 install privex-mail-queue
+pip3 install django-mail-queue
 ```
 
 ### (Alternative) Manual install from Git

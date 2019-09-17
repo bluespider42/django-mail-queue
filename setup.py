@@ -4,7 +4,7 @@ import mailqueue
 
 version = mailqueue.VERSION
 
-setup(name='privex-mail-queue',
+setup(name='django-mail-queue',
       version=version,
       description="Simple Mail Queuing for Django",
       long_description=open("README.md", "r").read(),
