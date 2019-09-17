@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/Privex/django-mail-queue.png?branch=master)](https://travis-ci.org/Privex/django-mail-queue)
 [![PyPi Version](https://img.shields.io/pypi/v/django-mail-queue.svg)](https://pypi.org/project/django-mail-queue/)
-![License Button](https://img.shields.io/pypi/l/django-mail-queue)
+![License Button](https://img.shields.io/pypi/l/django-mail-queue) ![PyPI - Downloads](https://img.shields.io/pypi/dm/django-mail-queue)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-mail-queue) 
+![GitHub last commit](https://img.shields.io/github/last-commit/Privex/django-mail-queue)
 
 Django Mail Queue
 =================
@@ -25,6 +27,12 @@ real time or with Celery.  As always, feedback, bugs, and suggestions are welcom
 
 Install
 ========
+
+`django-mail-queue` maintains high compatibility, from as old as Django 1.8 on Python 2.7, up to Django 2.2 on 
+Python 3.7
+
+To check the compatibility, see [Travis CI](https://travis-ci.org/Privex/django-mail-queue), which runs the unit
+tests on a variety of Python and Django versions.
 
 ### Download and install from PyPi using pip (recommended)
 
