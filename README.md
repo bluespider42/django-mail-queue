@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Privex/django-mail-queue.png?branch=master)](https://travis-ci.org/Privex/django-mail-queue)
-[![PyPi Version](https://img.shields.io/pypi/v/privex-mail-queue.svg)](https://pypi.org/project/privex-mail-queue/)
-![License Button](https://img.shields.io/pypi/l/privex-mail-queue)
+[![PyPi Version](https://img.shields.io/pypi/v/django-mail-queue.svg)](https://pypi.org/project/django-mail-queue/)
+![License Button](https://img.shields.io/pypi/l/django-mail-queue)
 
 Django Mail Queue
 =================
